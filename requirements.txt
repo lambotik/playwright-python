@@ -3,4 +3,7 @@ playwright==1.42.0
 allure-pytest==2.13.3
 pytest==7.4.0
 selenium==4.18.1
-allure-python-commons==2.13.2
+allure-python-commons==2.13.3
+requests==2.31.0
+python-dotenv==1.0.1
+pip==24.0
