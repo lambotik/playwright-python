@@ -12,7 +12,7 @@ on:
 
 jobs:
   tests:
-    name: I. Building environment and testing the capital.com website
+    name: I. Building
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repo, master branch
@@ -41,13 +41,13 @@ jobs:
           pytest -s -vv --alluredir=allure-results
         continue-on-error: true
 
-      - name: 9. Upload artifact "allure-results"
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-results
-          path: allure-results/
-          retention-days: 1
+#      - name: 9. Upload artifact "allure-results"
+#        if: always()
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: allure-results
+#          path: allure-results/
+#          retention-days: 1
 
   generate_and_deploy_report:
     name: II. Generate & Deploy Allure report
