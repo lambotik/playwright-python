@@ -7,3 +7,4 @@ allure-python-commons==2.13.3
 requests==2.31.0
 python-dotenv==1.0.1
 pip==24.0
+npm==0.1.1
