@@ -1,3 +1,5 @@
+import time
+
 import allure
 
 from pages.elements_page import ElementsPage
@@ -25,3 +27,12 @@ class TestElementsPage:
         entered_data = page.fill_all_fields()
         table_data = page.get_value_from_the_table()
         assert entered_data == table_data
+
+    @allure.step('test_check_box')
+    def test_check_box(self, browser):
+        page = ElementsPage(browser, url)
+        page.open()
+        page.click_random_checkboxes()
+        page.get_checked_checkboxes()
+
+
